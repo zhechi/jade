@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>个人资料</title>
+    <link rel="stylesheet" type="text/css" href="build/build.css">
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="top">
+        <div class="content"><a href="#" class="logo"><img src="img/js_logo.jpg" alt="极客加速"></a>
+          <ul class="nav"><a href="#">首页</a><a href="#">规则介绍</a><a href="#">提交项目</a><a href="#">关于我们</a>
+          </ul>
+        </div>
+      </div>
+      <div class="content">
+        <div class="left_box">
+          <ul>
+            <h2>我的账户</h2><a href="#">我的动态</a><a href="#" class="active">个人资料</a><a href="#">账户安全</a>
+            <h2>我的项目</h2><a href="#">认购的项目</a><a href="#">关注的项目</a>
+            <h2>我的交易</h2><a href="#">绑定银行卡</a><a href="#">充值/提现</a><a href="#">项目交易记录</a>
+          </ul>
+        </div>
+        <div class="right_box">
+          <div class="r_box">
+            <h3>个人资料</h3>
+            <p>在这里，您可以修改一些基本信息</p>
+          </div>
+          <!--个人资料-->
+          <div class="touxiang"><img src="img/1.png"><span></span></div>
+          <div class="form_center">
+          <!--标签-->
+          <ul class="tags"><a href="#" onclick="box();">标签管理</a>
+            <li>市场营销</li>
+            <li>商业运营</li>
+            <li>影响力</li>
+          </ul>
+          <form>
+            <fieldset>
+              <label>用户名:</label>
+              <input type="text" id="txtName"><span></span>
+            </fieldset>
+            <fieldset>
+              <label>真实姓名:</label>
+              <input type="text" id="tName"><span></span>
+            </fieldset>
+            <fieldset>
+              <label>Email:</label>
+              <input type="text" id="txtEmail"><span></span>
+            </fieldset>
+            <fieldset>
+              <label>公司名称:</label>
+              <input type="text"id="company"><span></span>
+            </fieldset>
+             <fieldset>
+              <label>职位名称:</label>
+              <input type="text" id="job"><span></span>
+            </fieldset>
+            <fieldset>
+              <label>手机号:</label>
+             <input type="text" id="txtCellPhone"><span></span>
+            </fieldset>
+            <fieldset>
+              <label>地址:</label>
+              <div class="address">
+                <!-- <div class="form-item form-type-select form-item-provinces-td">
+                  <span class="form-select-overlay">
+                    <select class="translate form-select" data-parsley-trigger="change" name="province" id="province" >
+                    <option value="">
+                      北京
+                    </option>
+                    <option value="">
+                      北京
+                    </option>
+                    <option value="">
+                      北京
+                    </option>
+                    <option value="">
+                      北京
+                    </option>
+                    <option value="">
+                      北京
+                    </option>
+                    <option value="">
+                      北京
+                    </option>
+
+                    </select>
+                    <ul class="parsley-errors-list" id="parsley-id-4424">
+                    </ul>
+                  </span>
+                </div> -->
+                <div id="s_province" class="form-item"></div><em>－</em><div id="s_city" class="form-item"></div><em>－</em><div id="s_county" class="form-item"></div>
+                <input type="text" placeholder="请输入详细地址" id="address">
+            </div><span></span>
+            </fieldset>
+            <fieldset>
+              <label>邮编:</label>
+              <input type="text">
+            </fieldset>
+            <fieldset>
+              <label>个人简介:</label>
+              <textarea name="message"onKeyDown="textCounter(message,remLen,140);" onKeyUp="textCounter(message,remLen,140);"></textarea>
+              <p><input name="remLen" type="text" class="count" value="0" size="5" readonly="readonly">/140</p>
+            </fieldset>
+          </form> 
+          <button class="save_btn" id="sav_btn">
+            保存修改
+          </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="box tags_gl"> 
+      <button class="box_close">&times;</button>
+     <h3>标签管理</h3>
+      <ul>
+        <li>品牌沟通</li><li>市场营销</li><li>BD合作</li><li>品牌沟通</li><li>资本运作</li><li>财务管理</li><li>商业运营</li><li>产品速推</li><li>产品技术</li><li>法律事务</li><li>文化创意</li><li>影响力</li>
+      </ul>
+      <p>已选择<span><b id="tag_num">0</b>/3</span></p>
+      <button class="tag_confirm">确认</button>
+    </div>
+   
+    <script src="build/build.js"></script>
+     <script src="js/main.js"></script>
+    <script src="js/select.js"></script>
+<!-- <input type="button" name="button" value="查看文本" onclick="alert(tmhSelect.text('test'))" />
+<input type="button" name="button" value="查看选项值" onclick="alert(tmhSelect.value('test'))" />  -->
+<script language="javascript">
+tmhSelect.show("s_province","s_province",selOptions,"",168,"test()");
+tmhSelect.show("s_city","s_city",selOptions,"",168,"test()");
+tmhSelect.show("s_county","s_county",selOptions,"",168,"test()");
+</script>
+  </body>
+</html>

@@ -1,0 +1,35 @@
+extends ../layout
+
+block content
+  .container
+    .row
+      form.form-horizontal(method="post",action="/admin/movie/new")
+        input(type="hidden",name="movie[_id}",value="#{movie._id}")
+        .form-group
+          label.col-sm-2.control-label(for="inputTitle") 电影名字
+          .col-sm-10
+            input#inputTitle.form-control(type="text",name="move[title]")
+        .form-group
+          label.col-sm-2.control-label(for="inputDoctor") 电影导演
+          .col-sm-10
+            input#inputDoctor.form-control(type="text",name="move[doctor]")
+        .form-group
+          label.col-sm-2.control-label(for="inputCountry") 国家
+          .col-sm-10
+            input#inputCountry.form-control(type="text",name="move[country]")
+        .form-group
+          label.col-sm-2.control-label(for="inputLanguage") 语种
+          .col-sm-10
+            input#inputLanguage.form-control(type="text",name="move[language]")
+        .form-group
+          label.col-sm-2.control-label(for="inputPoster") 海报地址
+          .col-sm-10
+            input#inputPoster.form-control(type="text",name="move[poster]")
+        .form-group
+          label.col-sm-2.control-label(for="inputFlash") 电影地址
+          .col-sm-10
+            input#inputFlash.form-control(type="text",name="move[flash]")
+        .form-group
+          label.col-sm-2.control-label(for="inputSummary") 电影简介
+          .col-sm-10
+            input#inputSummary.form-control(type="text",name="move[summary]")

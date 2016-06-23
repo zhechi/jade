@@ -1,0 +1,51 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    title 个人资料
+    link(rel='stylesheet', type='text/css', href='build/build.css')
+  body
+    div.wrapper
+      div.top
+        div.content
+          a.logo(href='#')
+            img(src='img/js_logo.jpg' alt='极客加速')
+          ul.nav
+             - var navs = ["首页","规则介绍","提交项目","关于我们"]
+             each nav in navs
+               a(href='#')= nav
+      div.content
+        div.left_box
+          ul
+            h2 我的账户
+            a(href='#') 我的动态
+            a(href='#').active 个人资料
+            a(href='#') 账户安全
+            h2 我的项目
+            a(href='#') 认购的项目
+            a(href='#') 关注的项目
+            h2 我的交易
+            a(href='#') 绑定银行卡
+            a(href='#') 充值/提现
+            a(href='#') 项目交易记录
+        div.right_box
+          div.r_box
+            h3 个人资料
+            p 在这里，您可以修改一些基本信息
+          //个人资料
+          .touxiang
+            img(src='img/1.png')
+            span
+          //标签
+          ul.tags
+            a(href='#') 标签管理
+            li 市场营销
+            li 商业运营
+            li 影响力
+          form
+            fieldset
+              label 用户名：
+              input(type='text')
+          .yjz
+             p 已加载全部数据
+    script(src='build/build.js')
