@@ -1,4 +1,4 @@
-# learn jade and stylus
+# I learn jade and stylus
 > A project with generator-jadestyl
 
 First, ensure you have the following installed:
